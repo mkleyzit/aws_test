@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<TestModel Version="5.8.8657">
+  <TestCase RecordedUrl="https://globalcorp.crm.dynamics.com/" Id="714ea820-0d40-420d-94af-03936004ae98" RecordedOn="2023-09-14T13:12:13.5381539-04:00" Name="Big TC" ExecutionMode="Recorded" PageThinkTimeMode="Constant" ConstantPageThinkTime="10" TransactionThinkTimeMode="Constant" ConstantTransactionThinkTime="10" ThinkTime="0" MixWeight="1">
+    <Transaction Name="Landing" Goal="15">
+      <Session Cache="RequestAlways" Id="1" />
+      <Session Cache="RequestAlways" Id="2" />
+      <Session Cache="RequestAlways" Id="3" />
+      <Session Cache="RequestAlways" Id="4" />
+    </Transaction>
+  </TestCase>
+  <KPICounters>
+    <KPICounter Name="Requests/Sec" />
+    <KPICounter Name="Avg. Response (s)" />
+    <KPICounter Name="KB Received/Sec" />
+    <KPICounter Name="Errors/Sec" />
+    <KPICounter Name="Pending Requests" />
+    <KPICounter Name="Total Transactions/Sec" />
+  </KPICounters>
+  <Agents>
+    <Agent Name="Local" Host="MAX-PC-2" UserName="" CreateMonitors="Yes" />
+  </Agents>
+  <TestConfigurations>
+    <TestConfiguration TestID="356360a8-fee0-4dbf-b91c-13c37fd2b4cc" CurrentTestCase="714ea820-0d40-420d-94af-03936004ae98" DataStorageMedium="SQLite" IsCurrent="true">
+      <MixWeights LoadGenMixWeights="Local:1" TestObjectMixWeights="Big TC:1" TestObjectTier="Big TC:0" />
+      <Browsers>
+        <Browser Name="Chrome 64.0" MaxHostConnections="6" MaxTotalConnections="6" ReplaceUserAgent="false" UserAgentString="Mozilla/5.0 (Windows NT 6.1; Win64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.119 Safari/537.36" />
+      </Browsers>
+      <Networks>
+        <Network Name="Gigabit Ethernet" UploadBandwith="1000000" DownloadBandwith="1000000" />
+      </Networks>
+      <MultiLoadPatterns>
+        <MultiLoadPattern Name="Main" />
+      </MultiLoadPatterns>
+    </TestConfiguration>
+  </TestConfigurations>
+</TestModel>
